@@ -21,10 +21,13 @@
         <li class="list-group-item flex-fill">
           <a href="">Dashboard</a>
         </li>
-        <li class="list-group-item flex-fill"><a href="">Login</a></li>
+        {{#if loggedIn}}
         <li class="list-group-item flex-fill">
           <a href="" id="logout-link">Logout</a>
         </li>
+        {{else}}
+        <li class="list-group-item flex-fill"><a href="">Login</a></li>
+        {{/if}}
       </ul>
     </nav>
     <div class="d-flex justify-content-center">
