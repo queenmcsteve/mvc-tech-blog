@@ -1,4 +1,4 @@
-const { User } = requier("../models");
+const { User } = require("../models");
 
 const userData = [
   {
@@ -10,7 +10,7 @@ const userData = [
     password: "nosnitching",
   },
   {
-    username: "grandad",
+    username: "granddad",
     password: "newshoes",
   },
 ];
