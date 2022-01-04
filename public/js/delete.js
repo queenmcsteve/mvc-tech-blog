@@ -22,7 +22,7 @@ async function deletePostHandler(event) {
   }
 }
 
-// check querySelector identifier for post-delete buttonn
+// check querySelector identifier for post-delete button
 
 document
   .querySelector(".delete-post-btn")
