@@ -17,17 +17,17 @@
   <body>
     <nav class="navbar navbar-light bg-light justify-content-center">
       <ul class="list-group list-group-horizontal">
-        <li class="list-group-item flex-fill"><a href="">Home</a></li>
+        <li class="list-group-item flex-fill"><a href="/">Home</a></li>
         <li class="list-group-item flex-fill">
-          <a href="">Dashboard</a>
+          <a href="/dashboard">Dashboard</a>
         </li>
-        <!-- {{#if loggedIn}} -->
+        {{#if loggedIn}}
         <li class="list-group-item flex-fill">
           <a href="" id="logout-link">Logout</a>
         </li>
-        <!-- {{else}} -->
-        <li class="list-group-item flex-fill"><a href="">Login</a></li>
-        <!-- {{/if}} -->
+        {{else}}
+        <li class="list-group-item flex-fill"><a href="/signup-login">Login</a></li>
+        {{/if}}
       </ul>
     </nav>
     <header class="hero d-flex justify-content-center">

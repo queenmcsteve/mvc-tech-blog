@@ -40,7 +40,7 @@ router.post("/login", (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
     });
-    console.log("line 42");
+    console.log(req.session.loggedIn);
     res.json({ user: dbUserData, message: "You are now logged in!" });
   });
 });

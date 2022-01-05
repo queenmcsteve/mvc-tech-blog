@@ -5,7 +5,7 @@ const privateRoutes = require("./html/private");
 const withAuth = require("./middleware");
 
 router.use("/api", apiRoutes);
-router.use("/", withAuth, privateRoutes);
+//router.use("/", withAuth, privateRoutes);
 router.use("/", htmlRoutes);
 // router.use("/", homeRoutes);
 
