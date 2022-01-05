@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const loginFormHandler = async function (event) {
   event.preventDefault();
   const username = document.querySelector("#username-input-login");
@@ -9,7 +7,7 @@ const loginFormHandler = async function (event) {
     const response = await fetch("/api/user/login", {
       method: "POST",
       body: JSON.stringify({
-        username: username.ariaValueMax,
+        username: username.value,
         password: password.value,
       }),
       headers: { "Content-Type": "application/json" },

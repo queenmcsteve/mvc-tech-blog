@@ -24,6 +24,7 @@ router.post("/", (req, res) => {
 
 // login
 router.post("/login", (req, res) => {
+  console.log("HI");
   User.findOne({
     where: {
       username: req.body.username,
@@ -33,14 +34,14 @@ router.post("/login", (req, res) => {
       res.status(400).json({ message: "No account found!" });
       return;
     }
-
+    console.log("line 36");
     req.session.save(() => {
       req.session.userId = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-
-      res.json({ user: dbUserData, message: "You are now logged in!" });
     });
+    console.log("line 42");
+    res.json({ user: dbUserData, message: "You are now logged in!" });
   });
 });
 

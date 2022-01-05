@@ -23,7 +23,7 @@ const sess = {
 
 const hbs = exphbs.create({
   helpers: {
-    format_date: (date) => {
+    formatDate: (date) => {
       return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
     },
   },

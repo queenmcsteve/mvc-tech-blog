@@ -21,24 +21,23 @@
         <li class="list-group-item flex-fill">
           <a href="">Dashboard</a>
         </li>
-        {{#if loggedIn}}
-          <li class="list-group-item flex-fill">
-            <a href="" id="logout-link">Logout</a>
-          </li>
-        {{else}}
-          <li class="list-group-item flex-fill"><a href="">Login</a></li>
-        {{/if}}
+        <!-- {{#if loggedIn}} -->
+        <li class="list-group-item flex-fill">
+          <a href="" id="logout-link">Logout</a>
+        </li>
+        <!-- {{else}} -->
+        <li class="list-group-item flex-fill"><a href="">Login</a></li>
+        <!-- {{/if}} -->
       </ul>
     </nav>
+    <header class="hero d-flex justify-content-center">
+      <h1 class="app-title">
+        <a href="">The Tech Blog</a>
+      </h1>
+    </header>
     <div class="d-flex justify-content-center">
-      <header class="hero">
-        <h1 class="app-title">
-          <a href="">The Tech Blog</a>
-        </h1>
-      </header>
-      <main class="col-auto">
+      <div id="x">
         {{{body}}}
-      </main>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
@@ -47,5 +46,12 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/signup.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/delete.js"></script>
+    <script src="/js/edit.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/logout.js"></script>
+    <script src="/js/new.js"></script>
   </body>
 </html>
