@@ -45,7 +45,7 @@ router.post("/login", async (req, res) => {
         return;
       });
     } else {
-      return res.status(401);
+      return res.status(401).json("Invalid password");
     }
   });
 });

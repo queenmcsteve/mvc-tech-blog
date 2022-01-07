@@ -6,7 +6,7 @@ async function editPostHandler(postId) {
     method: "PUT",
     body: JSON.stringify({
       title: title.value,
-      body: content.value,
+      content: content.value,
     }),
     headers: { "Content-type": "application/json" },
   });
