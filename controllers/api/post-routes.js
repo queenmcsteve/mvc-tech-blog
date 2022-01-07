@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
 });
 
 // POST post
-router.post("/", withAuth, (req, res) => {
+router.post("/new", withAuth, (req, res) => {
   const content = req.content;
   console.log(req.body.user_id);
   Post.create({
@@ -38,7 +38,7 @@ router.post("/", withAuth, (req, res) => {
 });
 
 // PUT post
-router.put("/:id", withAuth, (req, res) => {
+router.put("/edit/:id", withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,

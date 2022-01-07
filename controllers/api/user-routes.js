@@ -23,25 +23,30 @@ router.post("/", (req, res) => {
 });
 
 // login
-router.post("/login", (req, res) => {
-  console.log("HI");
+router.post("/login", async (req, res) => {
   User.findOne({
     where: {
       username: req.body.username,
     },
-  }).then((dbUserData) => {
+  }).then(async (dbUserData) => {
     if (!dbUserData) {
       res.status(400).json({ message: "No account found!" });
       return;
     }
-    console.log("line 36");
-    req.session.save(() => {
-      req.session.userId = dbUserData.id;
-      req.session.username = dbUserData.username;
-      req.session.loggedIn = true;
-    });
-    console.log(req.session.loggedIn);
-    res.json({ user: dbUserData, message: "You are now logged in!" });
+
+    const passwordIsValid = await dbUserData.checkPassword(req.body.password);
+    if (passwordIsValid) {
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+
+        res.json({ user: dbUserData, message: "You are now logged in!" });
+        return;
+      });
+    } else {
+      return res.status(401);
+    }
   });
 });
 
