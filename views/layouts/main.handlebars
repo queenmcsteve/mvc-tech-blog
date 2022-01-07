@@ -15,21 +15,7 @@
     <title>Tech Blog</title>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light justify-content-center">
-      <ul class="list-group list-group-horizontal">
-        <li class="list-group-item flex-fill"><a href="/">Home</a></li>
-        <li class="list-group-item flex-fill">
-          <a href="/dashboard">Dashboard</a>
-        </li>
-        {{#if loggedIn}}
-        <li class="list-group-item flex-fill">
-          <a href="" id="logout-link">Logout</a>
-        </li>
-        {{else}}
-        <li class="list-group-item flex-fill"><a href="/signup-login">Login</a></li>
-        {{/if}}
-      </ul>
-    </nav>
+    
     <header class="hero d-flex justify-content-center">
       <h1 class="app-title">
         <a href="">The Tech Blog</a>
@@ -46,12 +32,12 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/new.js"></script>
     <script src="/js/signup.js"></script>
     <script src="/js/comment.js"></script>
     <script src="/js/delete.js"></script>
     <script src="/js/edit.js"></script>
     <script src="/js/login.js"></script>
     <script src="/js/logout.js"></script>
-    <script src="/js/new.js"></script>
   </body>
 </html>

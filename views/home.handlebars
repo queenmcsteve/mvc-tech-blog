@@ -1,8 +1,16 @@
+{{#if loggedIn}}
+  {{>private-nav}}
+  {{else}}
+  {{>public-nav}}
+{{/if}}
+
 {{#each posts as |post|}}
 
   <div class="card">
     <div class="card-header">
-      {{post.title}}
+      <a href="/post/{{id}}">
+        {{post.title}}
+      </a>
     </div>
     <div class="card-body">
       <p class="card-text">

@@ -1,8 +1,16 @@
+  {{>private-nav}}
+
+<div class="card">
+  <div class="card-header"><a href="/api/post/new">New Post</a></div>
+</div>
+
 {{#each posts as |post|}}
 
   <div class="card">
     <div class="card-header">
-      {{post.title}}
+      <a href="api/post/edit/{{id}}">
+        {{post.title}}
+      </a>
     </div>
     <div class="card-body">
       <p class="card-text">
