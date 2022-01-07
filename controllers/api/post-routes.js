@@ -29,7 +29,7 @@ router.post("/new", withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
     content: req.body.content,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((newPost) => res.json(newPost))
     .catch((err) => {

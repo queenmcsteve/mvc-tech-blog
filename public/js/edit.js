@@ -1,11 +1,13 @@
 async function editPostHandler(event) {
   event.preventDefault();
 
-  const title = document.getElementById("post-title");
-  const content = document.getElementById("post-content");
-  const postId = document.getElementById("post-id");
-
-  const response = await fetch("/api/post/" + postId.value, {
+  const title = document.querySelector("#post-title");
+  const content = document.querySelector("#post-content");
+  const postId = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
+  console.log("/api/post/edit/" + postId);
+  const response = await fetch("/api/post/edit/" + postId, {
     method: "PUT",
     body: JSON.stringify({
       title: title.value,
@@ -15,12 +17,12 @@ async function editPostHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard/");
+    document.location.replace("/dashboard");
   } else {
     alert(response.statusText);
   }
 }
 
 document
-  .querySelector(".edit-post-form")
-  .addEventListener("submit", editFormHandler);
+  .querySelector("#edit-post-btn")
+  .addEventListener("click", editPostHandler);

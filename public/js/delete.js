@@ -4,8 +4,8 @@ async function deletePostHandler(event) {
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
-
-  const response = await fetch(`/api/posts/${id}`, {
+  console.log(id);
+  const response = await fetch(`/api/post/${id}`, {
     method: "DELETE",
     body: JSON.stringify({
       post_id: id,
@@ -25,5 +25,5 @@ async function deletePostHandler(event) {
 // check querySelector identifier for post-delete button
 
 document
-  .querySelector(".delete-post-btn")
+  .querySelector("#delete-post-btn")
   .addEventListener("click", deletePostHandler);

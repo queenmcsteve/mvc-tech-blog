@@ -1,4 +1,4 @@
-const postId = document.querySelector('input[name="post-id"]').ariaValueMax;
+const postId = document.querySelector('input[name="post-id"]').value;
 console.log(postId);
 
 const commentFormHandler = async (event) => {
@@ -26,3 +26,7 @@ const commentFormHandler = async (event) => {
     }
   }
 };
+
+document
+  .querySelector("#new-comment")
+  .addEventListener("#submit-comment", commentFormHandler);
