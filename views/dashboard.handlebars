@@ -1,12 +1,12 @@
   {{>private-nav}}
 
-<div class="card">
+<div class="d-flex  align-items-center flex-column">
+<div class="card" style="max-width: 300px">
   <div class="card-header"><a href="/api/post/new">New Post</a></div>
 </div>
-
 {{#each posts as |post|}}
 
-  <div class="card">
+  <div class="card" style="max-width: 600px;">
     <div class="card-header">
       <a href="api/post/edit/{{id}}">
         {{post.title}}
@@ -25,3 +25,4 @@
   </div>
 
 {{/each}}
+</div>

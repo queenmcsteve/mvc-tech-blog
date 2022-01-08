@@ -4,9 +4,9 @@
   {{>public-nav}}
 {{/if}}
 
+<div class="d-flex align-items-center justify-content-center flex-column">
 {{#each posts as |post|}}
-
-  <div class="card">
+  <div class="card" style="max-width: 600px;">
     <div class="card-header">
       <a href="/post/{{id}}">
         {{post.title}}
@@ -23,5 +23,5 @@
       </footer>
     </div>
   </div>
-
 {{/each}}
+</div>
