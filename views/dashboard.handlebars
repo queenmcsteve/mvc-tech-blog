@@ -1,0 +1,28 @@
+  {{>private-nav}}
+
+<div class="d-flex  align-items-center flex-column">
+<div class="card" style="max-width: 300px">
+  <div class="card-header"><a href="/api/post/new">New Post</a></div>
+</div>
+{{#each posts as |post|}}
+
+  <div class="card" style="max-width: 600px;">
+    <div class="card-header">
+      <a href="api/post/edit/{{id}}">
+        {{post.title}}
+      </a>
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        {{post.content}}
+      </p>
+      <footer class="blockquote-footer">
+        {{post.user.username}}
+        @
+        {{formatDate post.createdAt}}
+      </footer>
+    </div>
+  </div>
+
+{{/each}}
+</div>

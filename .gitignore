@@ -1,0 +1,5 @@
+html-del
+node_modules
+.env
+.DS_Store
+README_Task-Criteria.md
