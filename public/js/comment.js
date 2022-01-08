@@ -2,6 +2,7 @@
 // console.log(postId);
 
 async function commentFormHandler(postId) {
+  console.log(postId);
   // event.preventDefault();
   const commentContent = document.querySelector("#new-comment").value;
   console.log(commentContent);
@@ -10,7 +11,7 @@ async function commentFormHandler(postId) {
     const response = await fetch("/api/comment/new", {
       method: "POST",
       body: JSON.stringify({
-        postId,
+        post_id: postId,
         comment_text: commentContent,
       }),
       headers: {

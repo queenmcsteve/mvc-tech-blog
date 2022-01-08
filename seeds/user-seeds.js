@@ -4,14 +4,17 @@ const userData = [
   {
     username: "huey",
     password: "jesuswasblack",
+    user_id: 1,
   },
   {
     username: "riley",
     password: "nosnitching",
+    user_id: 2,
   },
   {
     username: "granddad",
     password: "newshoes",
+    user_id: 3,
   },
 ];
 
