@@ -12,6 +12,7 @@ A blogging platform allowing users to create accounts, make/edit/delete posts, a
 - [Technologies](#technologies)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
+- [Demo](#demo)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Contact](#contact)
@@ -80,6 +81,28 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ```
 
 # Screenshots
+
+Homepage (before login)
+![screenshot](./public/screenshots/home.jpg)
+
+Login/Signup
+![screenshot](./public/screenshots/login-signup.jpg)
+
+Dashboard
+![screenshot](./public/screenshots/dashboard.jpg)
+
+Edit/Delete Post
+![screenshot](./public/screenshots/edit-post.jpg)
+
+Homepage (after login)
+![screenshot](./public/screenshots/home-loggedin.jpg)
+
+Comment
+![screenshot](./public/screenshots/comment.jpg)
+
+# Demo
+
+See the app deployed on Heroku [here](https://pacific-refuge-98850.herokuapp.com/).
 
 # Contributing
 
