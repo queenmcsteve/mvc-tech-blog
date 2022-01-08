@@ -29,7 +29,7 @@
 
 {{#if loggedIn}}
 <div class="card">
-    <div class="card-body">
+    <div class="card-body" >
       <div class="mb-3">
         <label
           for="exampleFormControlTextarea1"
@@ -37,12 +37,12 @@
         >Comment</label>
         <textarea
           class="form-control"
-          id="exampleFormControlTextarea1"
+          id="new-comment"
           rows="3"
         ></textarea>
       </div>
       <div class="col-12">
-        <button class="btn btn-primary" type="submit">
+        <button class="btn btn-primary" type="button" onclick="commentFormHandler({{post.id}})"  id="submit-comment">
           Submit Comment
         </button>
       </div>
@@ -50,3 +50,6 @@
   </div>
 </div>
 {{/if}}
+
+
+    <script src="/js/comment.js"></script>
